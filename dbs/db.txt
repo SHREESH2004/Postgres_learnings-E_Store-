@@ -1,1 +1,2 @@
 Any kind of structured storage is DB
+why disk based dbs :- very cheap comared to RAM
