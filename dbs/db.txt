@@ -1,5 +1,16 @@
 Any kind of structured storage is DB
 why disk based dbs :- very cheap comared to RAM,
 
+DBMS responsible to provide CRUD Operation
+A
+C
+I 
+D
+
+DBMS responsibility:
+Data Organisation 
+Integrity: Accuracy and validity of data(the data is not corrupt or valid)
+ex: in stocks left in ecommerce system, then number should be enter so that dbms make sure only number data type and no other 
+data type entered
 
 
