@@ -36,4 +36,4 @@ case insensitive upper case more readable
 
 
 Commands: Usually SQL commands
-Update:
+Update: Update person set city='London' where id='2';
