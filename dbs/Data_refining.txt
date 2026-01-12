@@ -11,3 +11,9 @@ like
 
 
 Start from relational operators
+
+
+Aggregate fnc:
+COUNT:SELECT COUNT(use primary key or null same answer) from employees;
+Select SUM(salary) from employees;
+
