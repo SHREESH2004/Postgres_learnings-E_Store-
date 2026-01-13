@@ -15,5 +15,15 @@ FOREIGN KEY(cust_id) REFERENCES customers(cust_id)
 
 
 
+Joins:
+Cross : Every row from 1 table vombined with every row of another table.
+Inner : where match there that data will be shown
+left  : return all row from left of table and match row from right
+Right : same in reverse
+
+
+Many to Many:
+
+
 
 
