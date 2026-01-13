@@ -9,3 +9,23 @@ CREATE TABLE CONTACT{
     MOB VARCHAR(200) check (length(MOB)>=10);
 }
 
+Case:
+select firstname,salary,emp_id,
+CASE
+WHEN salary>=70000 then 'High'
+else 'Low'
+END AS salary_cat
+from employee;
+
+
+between and can also be used here
+
+select firstname,salary,emp_id,
+CASE
+WHEN salary>=30000 then round(salary*.10)
+END AS BONUS
+from employee;
+
+
+
+
