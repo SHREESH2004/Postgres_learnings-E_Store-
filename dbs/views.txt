@@ -4,3 +4,27 @@ join courses s on e.c_id=c.c_id;
 
 then if
 select * from billing_info; -- same result
+
+
+
+HAVING:
+Select p_name,sum(total_price) as Amount from billing_info group by p_name 
+Having sum(total_price)>1500;
+
+SELECT 
+    p_name, 
+    SUM(total_price) AS Amount
+FROM billing_info
+GROUP BY ROLLUP(p_name)
+HAVING SUM(total_price) > 1500;
+
+ROLLUP generates a grand total,(but the row name will be null)
+
+SELECT 
+    COALESCE(p_name, 'GRAND TOTAL') AS p_name, 
+    SUM(total_price) AS Amount
+FROM billing_info
+GROUP BY ROLLUP(p_name)
+HAVING SUM(total_price) > 1500;
+
+if any null comes it iwll show grandtotalin the row 
