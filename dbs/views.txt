@@ -27,4 +27,4 @@ FROM billing_info
 GROUP BY ROLLUP(p_name)
 HAVING SUM(total_price) > 1500;
 
-if any null comes it iwll show grandtotalin the row 
+if any null comes it will show grand total in the row 
