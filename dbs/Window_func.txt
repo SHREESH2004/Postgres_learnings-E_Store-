@@ -1,10 +1,18 @@
-use OVER() clause 
-wf used to perofrm artithmetic acresoos the row
+A Window Function is a powerful SQL tool that performs calculations across a set of rows that are related to the current row.
+
+The "superpower" of a window function is that it does not collapse your data. While a normal GROUP BY turns 10 rows into 1 summary row, 
+a window function keeps all 10 rows and adds a calculated value to each one.
+
+the OVER clause is what transforms a standard function (like SUM or AVG) into a Window Function.
 
 
-select sum(salary) over() from employees; sum accross all the each row foreach user; ==cu,ulative order
 
 Query,Result Behavior
 SUM(salary) OVER(),Grand Total: Every row shows the sum of the entire table.
 SUM(salary) OVER(ORDER BY id),Cumulative: Each row shows the sum of itself + all previous rows.
 SUM(salary) OVER(PARTITION BY dept),Sub-Total: Every row shows the total for its specific department only.
+
+Function,How it works,"Result for $5000, $5000, $4000"
+ROW_NUMBER(),"Assigns a unique, sequential number to every row. No ties allowed.","1, 2, 3"
+RANK(),"Assigns the same rank to ties, but skips the next number.","1, 1, 3"
+DENSE_RANK(),"Assigns the same rank to ties, but does not skip the next number.","1, 1, 2"

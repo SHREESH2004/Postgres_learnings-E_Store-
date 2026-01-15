@@ -1,0 +1,14 @@
+Find avg salary of a deptand shiw the names of all employees whose avg salary is greater than dept?
+
+1st: select dept,avg(salary) from employees group by dept;
+
+
+WITH avg_sal as(
+    select dept,avg(salary) as avg_salary from employees group by dept;
+) --- CTE example;
+
+Select 
+ e.emp_id,e.fname,e.dept,e.salary,a.avg_salary
+from employee e
+join avg_salary a on e.dept=a.dept
+where e.salary>a.avg_salary

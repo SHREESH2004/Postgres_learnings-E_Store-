@@ -1,11 +1,13 @@
+In PostgreSQL, a View is essentially a saved query that you can treat like a virtual table. 
+It doesn't store any data physically on the disk; instead, every time you query the view,
+
 CREATE VIEW billing_info as
 select * from employee e join student s on e.s_id=s.s_id
 join courses s on e.c_id=c.c_id;
 
+
 then if
 select * from billing_info; -- same result
-
-
 
 HAVING:
 Select p_name,sum(total_price) as Amount from billing_info group by p_name 
