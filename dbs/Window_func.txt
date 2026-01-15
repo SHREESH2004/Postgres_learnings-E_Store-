@@ -1,0 +1,10 @@
+use OVER() clause 
+wf used to perofrm artithmetic acresoos the row
+
+
+select sum(salary) over() from employees; sum accross all the each row foreach user; ==cu,ulative order
+
+Query,Result Behavior
+SUM(salary) OVER(),Grand Total: Every row shows the sum of the entire table.
+SUM(salary) OVER(ORDER BY id),Cumulative: Each row shows the sum of itself + all previous rows.
+SUM(salary) OVER(PARTITION BY dept),Sub-Total: Every row shows the total for its specific department only.
