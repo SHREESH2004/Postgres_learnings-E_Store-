@@ -1,3 +1,6 @@
-webtech
-node_modules
+# Folders to ignore
+node_modules/
+.webtech/
+
+# Sensitive files to ignore
 .env
