@@ -104,4 +104,4 @@ Built for backend interviews and production financial systems.
 ---
 
 **License:** MIT  
-**Author:** [@yourusername](https://github.com/SHREESH2004)
+**Author:** [@SHREESH2004](https://github.com/SHREESH2004)
